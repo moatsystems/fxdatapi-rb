@@ -1,0 +1,44 @@
+# Offense count: 74
+# Configuration parameters: CountAsOne.
+RSpec/ExampleLength:
+  Max: 17
+
+# Offense count: 1
+RSpec/LeakyConstantDeclaration:
+  Exclude:
+    - 'lib/currensees/auth.rb'
+
+# Offense count: 12
+# Configuration parameters: .
+# SupportedStyles: have_received, receive
+RSpec/MessageSpies:
+  EnforcedStyle: receive
+
+# Offense count: 115
+RSpec/MultipleExpectations:
+  Max: 15
+
+# Offense count: 372
+# Configuration parameters: EnforcedStyle, IgnoreSharedExamples.
+# SupportedStyles: always, named_only
+RSpec/NamedSubject:
+  Enabled: false
+
+# Offense count: 16
+RSpec/SubjectStub:
+  Exclude:
+    - 'lib/currensees/convert_all.rb'
+    - 'lib/currensees/convert.rb'
+    - 'lib/currensees/currencies.rb'
+    - 'lib/currensees/daily_average.rb'
+    - 'lib/currensees/historical.rb'
+    - 'lib/currensees/margins_spreads.rb'
+    - 'lib/currensees/performances.rb'
+    - 'lib/currensees/signals.rb'
+    - 'lib/currensees/version.rb'
+    - 'lib/currensees/weekly_average.rb'
+
+# Offense count: 69
+# Configuration parameters: AllowedConstants.
+Style/Documentation:
+  Enabled: false

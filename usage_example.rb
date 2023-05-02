@@ -99,6 +99,11 @@ weekly_average = Currensees::WeeklyAverage.get_weekly_average(username, password
 puts "Weekly Average result:"
 puts weekly_average.inspect
 
+# Using MonthlyAverage
+monthly_average = Currensees::MonthlyAverage.get_monthly_average(username, password, year, month)
+puts "Monthly Average result:"
+puts monthly_average.inspect
+
 # Using Convert
 converted_currency = Currensees::Convert.convert_currency(username, password, convert_date, base_currency, target_currency, convert_amount)
 puts "Converted currency result:"

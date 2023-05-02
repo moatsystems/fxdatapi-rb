@@ -37,6 +37,7 @@ RSpec/SubjectStub:
     - 'lib/currensees/signals.rb'
     - 'lib/currensees/version.rb'
     - 'lib/currensees/weekly_average.rb'
+    - 'lib/currensees/monthly_average.rb'
 
 # Offense count: 69
 # Configuration parameters: AllowedConstants.

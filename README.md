@@ -22,7 +22,7 @@ gem install currensees
 Or use Bundler and define it as a dependency in your Gemfile:
 
 ```ruby
-gem 'currensees', '~> 0.1.0'
+gem 'currensees', '~> 0.1.1'
 ```
 
 ### Documentation

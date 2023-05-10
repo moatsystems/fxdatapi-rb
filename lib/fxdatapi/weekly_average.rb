@@ -1,4 +1,4 @@
-# lib/currensees/weekly_average.rb
+# lib/fxdatapi/weekly_average.rb
 
 # frozen_string_literal: true
 
@@ -6,9 +6,9 @@ require 'net/http'
 require 'json'
 require_relative 'auth'
 
-module Currensees
+module Fxdatapi
   class WeeklyAverage
-    BASE_URL = 'https://currensees.com/v1/weekly_average'
+    BASE_URL = 'https://fxdatapi.com/v1/weekly_average'
 
     def self.get_weekly_average(username, password, from_date, to_date)
       login_result = Authentication.login(username, password)

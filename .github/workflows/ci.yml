@@ -1,4 +1,4 @@
-name: Currensees CI
+name: Fxdatapi CI
 
 on:
   pull_request:

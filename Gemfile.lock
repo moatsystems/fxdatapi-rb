@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    currensees (0.1.0)
+    fxdatapi (0.1.2)
 
 GEM
   remote: https://rubygems.org/
@@ -32,7 +32,7 @@ GEM
       rubocop-ast (>= 1.26.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 3.0)
-    rubocop-ast (1.28.0)
+    rubocop-ast (1.28.1)
       parser (>= 3.2.1.0)
     rubocop-capybara (2.18.0)
       rubocop (~> 1.41)
@@ -64,7 +64,7 @@ PLATFORMS
 
 DEPENDENCIES
   coveralls
-  currensees!
+  fxdatapi!
   rake (~> 13.0)
   rubocop (= 1.48.0)
   rubocop-performance (= 1.16.0)
@@ -73,4 +73,4 @@ DEPENDENCIES
   yard
 
 BUNDLED WITH
-   2.4.10
+   2.4.12

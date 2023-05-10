@@ -2,7 +2,7 @@
 
 # frozen_string_literal: true
 
-require 'currensees'
+require 'fxdatapi'
 
 # Authentication
 username = "your_username"
@@ -40,76 +40,76 @@ convert_amount = 500
 amount = 120
 
 # Using Authentication
-result = Currensees::Authentication.login(username, password)
+result = Fxdatapi::Authentication.login(username, password)
 puts "Authentication result:"
 puts result.inspect
 
 # Using Currencies
-currencies = Currensees::Currencies.get_currencies(username, password, day, month, year)
+currencies = Fxdatapi::Currencies.get_currencies(username, password, day, month, year)
 puts "Currencies result:"
 puts currencies.inspect
 
-currency_by_uuid = Currensees::Currencies.get_currency_by_uuid(username, password, currency_uuid, day, month, year)
+currency_by_uuid = Fxdatapi::Currencies.get_currency_by_uuid(username, password, currency_uuid, day, month, year)
 puts "Currency by UUID result:"
 puts currency_by_uuid.inspect
 
 # Using Historical
-historical_data = Currensees::Historical.get_historical_data(username, password, date, day, month, year)
+historical_data = Fxdatapi::Historical.get_historical_data(username, password, date, day, month, year)
 puts "Historical data result:"
 puts historical_data.inspect
 
-historical_data_by_id = Currensees::Historical.get_historical_data_by_id(username, password, data_id, date_string, day, month, year)
+historical_data_by_id = Fxdatapi::Historical.get_historical_data_by_id(username, password, data_id, date_string, day, month, year)
 puts "Historical data by ID result:"
 puts historical_data_by_id.inspect
 
 # Using MarginsSpreads
-margins_spreads = Currensees::MarginsSpreads.get_margins_spreads(username, password, day, month, year)
+margins_spreads = Fxdatapi::MarginsSpreads.get_margins_spreads(username, password, day, month, year)
 puts "Margins and spreads result:"
 puts margins_spreads.inspect
 
-margin_spread_by_uuid = Currensees::MarginsSpreads.get_margin_spread_by_uuid(username, password, margin_spread_uuid, day, month, year)
+margin_spread_by_uuid = Fxdatapi::MarginsSpreads.get_margin_spread_by_uuid(username, password, margin_spread_uuid, day, month, year)
 puts "Margin and spread by UUID result:"
 puts margin_spread_by_uuid.inspect
 
 # Using Performances
-performances = Currensees::Performances.get_performances(username, password)
+performances = Fxdatapi::Performances.get_performances(username, password)
 puts "Performances result:"
 puts performances.inspect
 
-performance_by_id = Currensees::Performances.get_performance_by_id(username, password, performance_id)
+performance_by_id = Fxdatapi::Performances.get_performance_by_id(username, password, performance_id)
 puts "Performance by ID result:"
 puts performance_by_id.inspect
 
 # Using Signals
-signals = Currensees::Signals.get_signals(username, password)
+signals = Fxdatapi::Signals.get_signals(username, password)
 puts "Signals result:"
 puts signals.inspect
 
-signal_by_id = Currensees::Signals.get_signal_by_id(username, password, signal_id)
+signal_by_id = Fxdatapi::Signals.get_signal_by_id(username, password, signal_id)
 puts "Signal by ID result:"
 puts signal_by_id.inspect
 
 # Using DailyAverage
-daily_average_data = Currensees::DailyAverage.get_daily_average(username, password, date)
+daily_average_data = Fxdatapi::DailyAverage.get_daily_average(username, password, date)
 puts "Daily average data result:"
 puts daily_average_data.inspect
 
 # Using WeeklyAverage
-weekly_average = Currensees::WeeklyAverage.get_weekly_average(username, password, from_date, to_date)
+weekly_average = Fxdatapi::WeeklyAverage.get_weekly_average(username, password, from_date, to_date)
 puts "Weekly Average result:"
 puts weekly_average.inspect
 
 # Using MonthlyAverage
-monthly_average = Currensees::MonthlyAverage.get_monthly_average(username, password, year, month)
+monthly_average = Fxdatapi::MonthlyAverage.get_monthly_average(username, password, year, month)
 puts "Monthly Average result:"
 puts monthly_average.inspect
 
 # Using Convert
-converted_currency = Currensees::Convert.convert_currency(username, password, convert_date, base_currency, target_currency, convert_amount)
+converted_currency = Fxdatapi::Convert.convert_currency(username, password, convert_date, base_currency, target_currency, convert_amount)
 puts "Converted currency result:"
 puts converted_currency.inspect
 
 # Using ConvertAll
-convert_all_result = Currensees::ConvertAll.convert_all(username, password, base_currency, amount, date)
+convert_all_result = Fxdatapi::ConvertAll.convert_all(username, password, base_currency, amount, date)
 puts "Conversion for all currencies result:"
 puts convert_all_result.inspect

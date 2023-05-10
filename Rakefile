@@ -33,5 +33,5 @@ task :clobber => "yardoc:clobber"
 
 desc "Open an irb session preloaded with this library"
 task :console do
-  sh "irb -r rubygems -I lib -r currensees.rb"
+  sh "irb -r rubygems -I lib -r fxdatapi.rb"
 end

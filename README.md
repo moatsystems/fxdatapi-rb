@@ -1,7 +1,7 @@
 ## Currency API Ruby Gem
 
-[![Gem](https://img.shields.io/gem/v/currensees)](https://rubygems.org/gems/currensees)
-[![Build Status](https://github.com/moatsystems/currensees-rb/actions/workflows/ci.yml/badge.svg)](https://github.com/moatsystems/currensees-rb/actions/workflows/ci.yml)
+[![Gem](https://img.shields.io/gem/v/fxdatapi)](https://rubygems.org/gems/fxdatapi)
+[![Build Status](https://github.com/moatsystems/fxdatapi-rb/actions/workflows/ci.yml/badge.svg)](https://github.com/moatsystems/fxdatapi-rb/actions/workflows/ci.yml)
 
 A Ruby Gem to interact with the [Currency API](https://moatsystems.com/currency-api/).
 
@@ -16,13 +16,13 @@ A Ruby Gem to interact with the [Currency API](https://moatsystems.com/currency-
 You can install the gem manually:
 
 ```shell
-gem install currensees
+gem install fxdatapi
 ```
 
 Or use Bundler and define it as a dependency in your Gemfile:
 
 ```ruby
-gem 'currensees', '~> 0.1.1'
+gem 'fxdatapi', '~> 0.1.1'
 ```
 
 ### Documentation
@@ -30,7 +30,7 @@ gem 'currensees', '~> 0.1.1'
 #### Relevant links
 
 - [Currency API product page](https://moatsystems.com/currency-api/)
-- [Currency API support documentation](https://docs.currensees.com/)
+- [Currency API support documentation](https://docs.fxdatapi.com/)
 
 ### Usage Example
 
@@ -46,7 +46,7 @@ Subscribe [here](https://moatsystems.com/currency-api/) for a user account.
 
 ### Using the Currency API
 
-You can read the [API documentation](https://docs.currensees.com/) to understand what's possible with the Currency API. If you need further assistance, don't hesitate to [contact us](https://moatsystems.com/contact/).
+You can read the [API documentation](https://docs.fxdatapi.com/) to understand what's possible with the Currency API. If you need further assistance, don't hesitate to [contact us](https://moatsystems.com/contact/).
 
 ### License
 

@@ -3,10 +3,10 @@
 require 'net/http'
 require 'json'
 
-module Currensees
+module Fxdatapi
   class Authentication
     def self.login(username, password)
-      uri = URI('https://currensees.com/v1/login')
+      uri = URI('https://fxdatapi.com/v1/login')
       request = Net::HTTP::Post.new(uri, 'Content-Type' => 'application/json', 'Accept' => 'application/json')
 
       request.body = {

@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in currensees.gemspec
+# Specify your gem's dependencies in fxdatapi.gemspec
 gemspec
 
 gem 'yard'

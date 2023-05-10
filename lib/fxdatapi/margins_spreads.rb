@@ -1,4 +1,4 @@
-# lib/currensees/performances.rb
+# lib/fxdatapi/margins_spreads.rb
 
 # frozen_string_literal: true
 
@@ -6,15 +6,15 @@ require 'net/http'
 require 'json'
 require_relative 'auth'
 
-module Currensees
-  class Performances
-    BASE_URL = 'https://currensees.com/v1/performances'
+module Fxdatapi
+  class MarginsSpreads
+    BASE_URL = 'https://fxdatapi.com/v1/margins_spreads'
 
-    def self.get_performances(username, password)
+    def self.get_margins_spreads(username, password, day, month, year)
       login_result = Authentication.login(username, password)
       cookie = "user_type=#{login_result['user_type']}; username=#{username}"
 
-      uri = URI("#{BASE_URL}?username=#{username}")
+      uri = URI("#{BASE_URL}?username=#{username}&day=#{day}&month=#{month}&year=#{year}")
       request = Net::HTTP::Get.new(uri, 'Content-Type' => 'application/json', 'Accept' => 'application/json', 'Cookie' => cookie)
 
       response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: uri.scheme == 'https') { |http| http.request(request) }
@@ -23,15 +23,15 @@ module Currensees
       when Net::HTTPSuccess
         JSON.parse(response.body)
       else
-        raise "Failed to fetch performances: #{response.code} #{response.message}"
+        raise "Failed to fetch margins and spreads: #{response.code} #{response.message}"
       end
     end
 
-    def self.get_performance_by_id(username, password, performance_id)
+    def self.get_margin_spread_by_uuid(username, password, uuid, day, month, year)
       login_result = Authentication.login(username, password)
       cookie = "user_type=#{login_result['user_type']}; username=#{username}"
 
-      uri = URI("#{BASE_URL}/#{performance_id}?username=#{username}")
+      uri = URI("#{BASE_URL}/#{uuid}?username=#{username}&day=#{day}&month=#{month}&year=#{year}")
       request = Net::HTTP::Get.new(uri, 'Content-Type' => 'application/json', 'Accept' => 'application/json', 'Cookie' => cookie)
 
       response = Net::HTTP.start(uri.hostname, uri.port, use_ssl: uri.scheme == 'https') { |http| http.request(request) }
@@ -40,7 +40,7 @@ module Currensees
       when Net::HTTPSuccess
         JSON.parse(response.body)
       else
-        raise "Failed to fetch performance by ID: #{response.code} #{response.message}"
+        raise "Failed to fetch margin and spread by uuid: #{response.code} #{response.message}"
       end
     end
   end

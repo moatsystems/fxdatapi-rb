@@ -1,4 +1,4 @@
-# lib/currensees/convert_all.rb
+# lib/fxdatapi/convert_all.rb
 
 # frozen_string_literal: true
 
@@ -6,9 +6,9 @@ require 'net/http'
 require 'json'
 require_relative 'auth'
 
-module Currensees
+module Fxdatapi
   class ConvertAll
-    BASE_URL = 'https://currensees.com/v1/convert_all'
+    BASE_URL = 'https://fxdatapi.com/v1/convert_all'
 
     def self.convert_all(username, password, base_currency, amount, date)
       login_result = Authentication.login(username, password)

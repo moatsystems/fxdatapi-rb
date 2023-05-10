@@ -1,7 +1,7 @@
 ---
 inherit_from:
   - .rubocop_todo.yml
-  - .rubocop_currensees.yml
+  - .rubocop_fxdatapi.yml
 
 require:
   - rubocop-performance
